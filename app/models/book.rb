@@ -1,4 +1,7 @@
 class Book < ApplicationRecord
+
+  belongs_to :customer, optional:true
+
   validates :title, :author, :year,  presence: true
 
   validates :number_of_pages , numericality:{
